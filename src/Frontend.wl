@@ -25,7 +25,7 @@ buildVocabulary[n_Notebook] := With[{outputCells = Select[n["Cells"], (#["Displa
 ]
 
 makeEntity[cell_] := With[{lines = StringSplit[cell["Data"], "\n"]},
-    Map[Function[line, StringCases[line, StartOfString~~">"~~d:("#"..)~~WhitespaceCharacter~~str__:>heading[StringLength[d], str, cell] ] ], lines]
+    Map[Function[line, StringCases[line, (StartOfString~~">" | StartOfString)~~d:("#"..)~~WhitespaceCharacter~~str__:>heading[StringLength[d], str, cell] ] ], lines]
 ] 
 
 debounce = AbsoluteTime[];
