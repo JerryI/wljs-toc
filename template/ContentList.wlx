@@ -19,7 +19,7 @@ Component[OptionsPattern[]] := With[{
         {
                 <WebUIRefresh Event={Local} Class={"flex grow flex-col gap-y-5 overflow-y-auto px-4 sc-b"}> 
                         <nav class="flex flex-1 flex-col" style="-webkit-app-region:none">
-                                <ul role="list" class="flex flex-1 flex-col p-0 gap-y-1 pl-2 pb-4 text-xs text-gray-700" id="{Local}">
+                                <ul role="list" class="flex flex-1 flex-col p-0 gap-y-1 pl-2 pb-4 text-xs text-gray-700 dark:text-gray-400" id="{Local}">
                                         <MakeTOC Notebook={notebook}/>
                                 </ul>
                         </nav>
