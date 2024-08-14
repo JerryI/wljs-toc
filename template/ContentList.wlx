@@ -4,7 +4,7 @@ normalNumber[n_] := With[{t = ToString[n, InputForm]},
 
 MakeTOC[Rule["Notebook", notebook_]] := Table[With[{Title = head[[2]], id = head[[3]]["Hash"], pad = normalNumber @ Round[head[[1]] 0.25 + 0.50, 0.05]},
           <li style="padding-left: {pad}rem" class="list-none relative w-full cursor-default rounded-md pl-3 pr-2 text-left focus:outline-none focus:ring-2 focus:ring-indigo-600">
-            <button data-cell="{id}"><Title/></button>
+            <button class="text-left" data-cell="{id}"><Title/></button>
           </li>
 ], {head, Flatten @ notebook["TOC"]}]
 
