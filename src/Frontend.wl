@@ -66,6 +66,8 @@ attachListeners[notebook_Notebook] := With[{e = notebook // EventClone},
 ]
 
 AppExtensions`TemplateInjection["AppSidebarBottom"] = ImportComponent[FileNameJoin[{rootDir, "template", "TOC.wlx"}] ];
+AppExtensions`TemplateInjection["HTMLExportSidebar"] = ImportComponent[FileNameJoin[{rootDir, "template", "ExportedTOC.wlx"}] ];
+
 
 End[]
 EndPackage[]
